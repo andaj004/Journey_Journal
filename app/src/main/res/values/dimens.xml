@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="widget_size_normal">56dp</dimen>
+    <dimen name="widget_margin_normal">16dp</dimen>
+    <dimen name="widget_margin_small">12dp</dimen>
+    <dimen name="widget_margin_xsmall">8dp</dimen>
+    <dimen name="text_size_normal">16sp</dimen>
+    <dimen name="text_size_large">24sp</dimen>
+    <dimen name="bottom_nav_height">56dp</dimen>
+    <dimen name="item_height">200dp</dimen>
+    <dimen name="fav_size_normal">24dp</dimen>
+    <dimen name="image_height">100dp</dimen>
+</resources>

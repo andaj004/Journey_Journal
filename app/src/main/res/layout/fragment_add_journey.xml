@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.andajsingh.journeyjournal.np.example.andajsingh.journeyjournal.presentation.dashboard.fragments.AddJourneyFragment"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/widget_margin_normal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_journey_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widget_size_normal"
+            app:layout_constraintTop_toTopOf="parent"
+            android:hint="@string/hint_journey_title"
+            app:boxBackgroundMode="filled"
+            app:boxBackgroundColor="@color/gray_chateau">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_et_journey_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:imeOptions="actionNext"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_journey_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/widget_size_normal"
+            app:layout_constraintTop_toBottomOf="@id/text_input_layout_journey_title"
+            android:hint="@string/hint_journey_description"
+            app:boxBackgroundMode="filled"
+            app:boxBackgroundColor="@color/gray_chateau"
+            android:layout_marginTop="@dimen/widget_margin_normal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_et_journey_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="10"
+                android:inputType="textMultiLine|textCapSentences"
+                android:imeOptions="actionNext"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_journey_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/widget_size_normal"
+            app:layout_constraintTop_toBottomOf="@id/text_input_layout_journey_description"
+            android:hint="@string/hint_journey_date"
+            app:boxBackgroundMode="filled"
+            app:boxBackgroundColor="@color/gray_chateau"
+            android:layout_marginTop="@dimen/widget_margin_normal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_et_journey_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_add_journey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+
+
+        <ImageView
+            android:id="@+id/iv_journey_image"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/image_height"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline_add_journey"
+            app:layout_constraintTop_toBottomOf="@+id/text_input_layout_journey_date"
+            android:layout_margin="@dimen/widget_margin_normal"
+            android:src="@android:drawable/ic_menu_gallery" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_pick_image"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/widget_size_normal"
+            android:text="Pick Image"
+            app:layout_constraintTop_toTopOf="@id/iv_journey_image"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_journey_image"
+            app:layout_constraintStart_toEndOf="@+id/guideline_add_journey"
+            app:layout_constraintEnd_toEndOf="@+id/parent"
+            android:layout_marginStart="@dimen/widget_margin_normal"
+            android:backgroundTint="@color/gray_chateau" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_journey"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widget_size_normal"
+            app:layout_constraintTop_toBottomOf="@id/btn_pick_image"
+            android:layout_marginTop="@dimen/widget_size_normal"
+            android:text="@string/add_journey"
+            app:backgroundTint="@color/teal_200"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

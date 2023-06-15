@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="np.com.andajsingh.journeyjournal.presentation.dashboard.fragments.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_journeyDetailsFragment"
+            app:destination="@id/journeyDetailsFragment" />
+        <argument
+            android:name="@string/args_show_toolbar"
+            app:argType="boolean"
+            android:defaultValue="false"/>
+        <argument
+            android:name="@string/args_show_bottom_navigation_view"
+            app:argType="boolean"
+            android:defaultValue="true"/>
+        <action
+            android:id="@+id/action_homeFragment_to_addFactFragment"
+            app:destination="@id/addJourneyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_editJourneyFragment"
+            app:destination="@id/editJourneyFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="np.com.andajsingh.journeyjournal.presentation.dashboard.fragments.NotificationFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notification" >
+        <action
+            android:id="@+id/action_notificationFragment_to_notificationDetailFragment"
+            app:destination="@id/notificationDetailFragment" />
+        <argument
+            android:name="@string/args_show_toolbar"
+            app:argType="boolean"
+            android:defaultValue="false"/>
+        <argument
+            android:name="@string/args_show_bottom_navigation_view"
+            app:argType="boolean"
+            android:defaultValue="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="np.com.andajsingh.journeyjournal.presentation.dashboard.fragments.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile">
+        <argument
+            android:name="@string/args_show_toolbar"
+            app:argType="boolean"
+            android:defaultValue="false"/>
+        <argument
+            android:name="@string/args_show_bottom_navigation_view"
+            app:argType="boolean"
+            android:defaultValue="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/journeyDetailsFragment"
+        android:name="np.com.andajsingh.journeyjournal.JourneyDetailsFragment"
+        android:label="fragment_journey_details"
+        tools:layout="@layout/fragment_journey_details">
+        <argument
+            android:name="@string/args_show_toolbar"
+            app:argType="boolean"
+            android:defaultValue="false"/>
+        <argument
+            android:name="@string/args_show_bottom_navigation_view"
+            app:argType="boolean"
+            android:defaultValue="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationDetailFragment"
+        android:name="np.com.andajsingh.journeyjournal.NotificationDetailFragment"
+        android:label="fragment_notification_detail"
+        tools:layout="@layout/fragment_notification_detail" />
+
+    <fragment
+        android:id="@+id/addJourneyFragment"
+        android:name="np.com.andajsingh.journeyjournal.presentation.dashboard.fragments.AddJourneyFragment"
+        android:label="fragment_add_journey"
+        tools:layout="@layout/fragment_add_journey">
+        <argument
+            android:name="@string/args_show_toolbar"
+            app:argType="boolean"
+            android:defaultValue="true"/>
+        <argument
+            android:name="@string/args_show_bottom_navigation_view"
+            app:argType="boolean"
+            android:defaultValue="false"/>
+        <action
+            android:id="@+id/action_addJourneyFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editJourneyFragment"
+        android:name="np.com.andajsingh.journeyjournal.presentation.dashboard.fragments.EditJourneyFragment"
+        android:label="EditJourneyFragment" >
+        <argument
+            android:name="@string/args_show_toolbar"
+            app:argType="boolean"
+            android:defaultValue="true"/>
+        <argument
+            android:name="@string/args_show_bottom_navigation_view"
+            app:argType="boolean"
+            android:defaultValue="false"/>
+        <action
+            android:id="@+id/action_editJourneyFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+</navigation>
